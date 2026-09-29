@@ -1,0 +1,115 @@
+<?php
+
+namespace App\Http\Requests\Admin\Products;
+
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
+
+class UpdateRequest extends FormRequest
+{
+    /**
+     * Determine if the user is authorized to make this request.
+     */
+    public function authorize(): bool
+    {
+        return true;
+    }
+
+    /**
+     * Get the validation rules that apply to the request.
+     *
+     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
+     */
+    public function rules(): array
+    {
+        $productId = $this->route('product')->id ?? null;
+
+        return [
+            'vendor_id' => ['sometimes', 'required', 'integer', 'exists:vendors,id'],
+            'type' => ['sometimes', 'required', 'string', Rule::in(['simple', 'variable'])],
+            'name' => ['sometimes', 'required', 'array'],
+            'name.en' => ['required_with:name', 'string', 'max:255'],
+            'name.ar' => ['required_with:name', 'string', 'max:255'],
+            'description' => ['nullable', 'array'],
+            'description.en' => ['nullable', 'string'],
+            'description.ar' => ['nullable', 'string'],
+            'thumbnail' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,svg,webp', 'max:5120'],
+            'sku' => [
+                'nullable',
+                'string',
+                'max:255',
+                Rule::unique('products', 'sku')->ignore($productId),
+            ],
+            'slug' => [
+                'nullable',
+                'string',
+                'max:255',
+                Rule::unique('products', 'slug')->ignore($productId),
+            ],
+            'price' => ['sometimes', 'required', 'numeric', 'min:0'],
+            'discount' => ['nullable', 'numeric', 'min:0'],
+            'discount_type' => ['nullable', 'string', Rule::in(['percentage', 'fixed'])],
+            'is_active' => ['nullable', 'boolean'],
+            'is_featured' => ['nullable', 'boolean'],
+            'is_new' => ['nullable', 'boolean'],
+            'is_approved' => ['nullable', 'boolean'],
+            'is_bookable' => ['nullable', 'boolean'],
+            'categories' => ['nullable', 'array'],
+            'categories.*' => ['integer', 'exists:categories,id'],
+            'images' => ['nullable', 'array'],
+            'images.*' => ['image', 'mimes:jpeg,png,jpg,gif,svg,webp', 'max:5120'],
+            'variations' => ['nullable', 'array'],
+            'variations.*.name' => ['nullable', 'array'],
+            'variations.*.name.en' => ['nullable', 'string', 'max:255'],
+            'variations.*.name.ar' => ['nullable', 'string', 'max:255'],
+            'variations.*.sku' => ['nullable', 'string', 'max:255'],
+            'variations.*.price' => ['nullable', 'numeric', 'min:0'],
+            'variations.*.thumbnail' => ['nullable', 'image', 'mimes:jpeg,png,jpg,gif,svg,webp', 'max:5120'],
+            'variations.*.values' => ['nullable', 'array'],
+            'variations.*.values.*.variant_id' => ['nullable', 'integer', 'exists:variants,id'],
+            'variations.*.values.*.option_id' => ['nullable', 'integer', 'exists:variant_options,id'],
+            'variations.*.branch_stocks' => ['nullable', 'array'],
+            'variations.*.branch_stocks.*' => ['nullable', 'integer', 'min:0'],
+        ];
+    }
+
+    /**
+     * Get custom messages for validator errors.
+     *
+     * @return array<string, string>
+     */
+    public function messages(): array
+    {
+        return [
+            'vendor_id.required' => __('The vendor is required.'),
+            'vendor_id.exists' => __('The selected vendor does not exist.'),
+            'type.required' => __('The product type is required.'),
+            'type.in' => __('The product type must be either simple or variable.'),
+            'name.required' => __('The product name is required.'),
+            'name.array' => __('The product name must be an array for translations.'),
+            'name.en.required_with' => __('The English name is required.'),
+            'name.ar.required_with' => __('The Arabic name is required.'),
+            'name.*.string' => __('Each translation must be a string.'),
+            'name.*.max' => __('Each translation must not exceed 255 characters.'),
+            'description.array' => __('The description must be an array for translations.'),
+            'description.*.string' => __('Each description translation must be a string.'),
+            'thumbnail.image' => __('The thumbnail must be an image.'),
+            'thumbnail.mimes' => __('The thumbnail must be a file of type: jpeg, png, jpg, gif, svg, webp.'),
+            'thumbnail.max' => __('The thumbnail must not be larger than 5MB.'),
+            'sku.unique' => __('This SKU is already taken.'),
+            'slug.unique' => __('This slug is already taken.'),
+            'price.required' => __('The price is required.'),
+            'price.numeric' => __('The price must be a number.'),
+            'price.min' => __('The price must be at least 0.'),
+            'discount.numeric' => __('The discount must be a number.'),
+            'discount.min' => __('The discount must be at least 0.'),
+            'discount_type.in' => __('The discount type must be either percentage or fixed.'),
+            'categories.array' => __('Categories must be an array.'),
+            'categories.*.exists' => __('One or more selected categories do not exist.'),
+            'images.array' => __('Images must be an array.'),
+            'images.*.image' => __('Each file must be an image.'),
+            'images.*.mimes' => __('Each image must be a file of type: jpeg, png, jpg, gif, svg, webp.'),
+            'images.*.max' => __('Each image must not be larger than 5MB.'),
+        ];
+    }
+}

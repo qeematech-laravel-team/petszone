@@ -1,0 +1,47 @@
+[03-Feb-2026 11:55:01 UTC] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.3.0". You are running 8.2.29. in /home/backendpro/pets-zone.backendpro.site/vendor/composer/platform_check.php:26
+Stack trace:
+#0 /home/backendpro/pets-zone.backendpro.site/vendor/composer/autoload_real.php(25): require()
+#1 /home/backendpro/pets-zone.backendpro.site/vendor/autoload.php(22): ComposerAutoloaderInit8e71125543d024b83aa123bcc2e4964e::getLoader()
+#2 /home/backendpro/pets-zone.backendpro.site/public/index.php(14): require('/home/backendpr...')
+#3 {main}
+  thrown in /home/backendpro/pets-zone.backendpro.site/vendor/composer/platform_check.php on line 26
+[22-Apr-2026 16:10:14 UTC] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.3.0". You are running 8.2.30. in /home/petszoneeg/dashboard.petszone-eg.com/vendor/composer/platform_check.php:26
+Stack trace:
+#0 /home/petszoneeg/dashboard.petszone-eg.com/vendor/composer/autoload_real.php(25): require()
+#1 /home/petszoneeg/dashboard.petszone-eg.com/vendor/autoload.php(22): ComposerAutoloaderInit8e71125543d024b83aa123bcc2e4964e::getLoader()
+#2 /home/petszoneeg/dashboard.petszone-eg.com/public/index.php(14): require('/home/petszonee...')
+#3 {main}
+  thrown in /home/petszoneeg/dashboard.petszone-eg.com/vendor/composer/platform_check.php on line 26
+[22-Apr-2026 16:10:29 UTC] PHP Fatal error:  Uncaught RuntimeException: Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.3.0". You are running 8.2.30. in /home/petszoneeg/dashboard.petszone-eg.com/vendor/composer/platform_check.php:26
+Stack trace:
+#0 /home/petszoneeg/dashboard.petszone-eg.com/vendor/composer/autoload_real.php(25): require()
+#1 /home/petszoneeg/dashboard.petszone-eg.com/vendor/autoload.php(22): ComposerAutoloaderInit8e71125543d024b83aa123bcc2e4964e::getLoader()
+#2 /home/petszoneeg/dashboard.petszone-eg.com/public/index.php(14): require('/home/petszonee...')
+#3 {main}
+  thrown in /home/petszoneeg/dashboard.petszone-eg.com/vendor/composer/platform_check.php on line 26
+[01-Jun-2026 16:29:44 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[01-Jun-2026 16:29:45 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[01-Jun-2026 16:29:58 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[01-Jun-2026 16:29:58 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[01-Jun-2026 16:29:59 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[01-Jun-2026 16:30:10 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[01-Jun-2026 16:30:11 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[01-Jun-2026 16:30:11 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[02-Jun-2026 07:28:30 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[02-Jun-2026 07:29:00 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[02-Jun-2026 07:29:04 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[02-Jun-2026 09:27:40 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[02-Jun-2026 09:27:55 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[02-Jun-2026 09:27:58 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[02-Jun-2026 09:28:01 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[02-Jun-2026 09:28:09 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[02-Jun-2026 09:28:26 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[02-Jun-2026 09:28:37 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[02-Jun-2026 09:28:42 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[02-Jun-2026 09:29:09 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[02-Jun-2026 09:29:15 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[02-Jun-2026 09:30:05 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[02-Jun-2026 09:38:49 UTC] PHP Fatal error:  Cannot use App\Notifications\OrderStatusUpdatedNotification as OrderStatusUpdatedNotification because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Services/OrderService.php on line 32
+[12-Aug-2026 12:25:50 UTC] PHP Fatal error:  A void function must not return a value in /home/petszone/dashboard.petszone-eg.com/app/Http/Requests/Api/Password/Auth/LoginRequest.php on line 72
+[12-Aug-2026 12:26:33 UTC] PHP Fatal error:  Cannot declare class App\Http\Requests\Api\Auth\LoginRequest, because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Http/Requests/Api/Password/Auth/LoginRequest.php on line 13
+[12-Aug-2026 12:26:35 UTC] PHP Fatal error:  Cannot declare class App\Http\Requests\Api\Auth\LoginRequest, because the name is already in use in /home/petszone/dashboard.petszone-eg.com/app/Http/Requests/Api/Password/Auth/LoginRequest.php on line 13

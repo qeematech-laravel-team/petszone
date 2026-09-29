@@ -1,0 +1,19 @@
+// ==========================================================================
+// Tickets Page Styles
+// ==========================================================================
+
+// Hide messages section when ticket is not pending
+.ticket-messages-hidden {
+    display: none !important;
+}
+
+// Ticket message styles
+.messages-list {
+    .message-item {
+        &:last-child {
+            border-bottom: none !important;
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+    }
+}

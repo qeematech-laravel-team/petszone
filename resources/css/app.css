@@ -1,0 +1,115 @@
+/* Import Bootstrap Admin Template Styles */
+@import '../scss/main.scss';
+
+/* Vendor Wizard Styles */
+.wizard-steps {
+  margin-bottom: 2rem;
+}
+
+.wizard-steps .wizard-step {
+  text-align: center;
+  flex: 1;
+  position: relative;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* not the first or last step */
+.wizard-steps .wizard-step:not(:last-child)::after , .wizard-steps .wizard-step:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  top: 2rem;
+  left: 0;
+  right: calc(-50% + 1.5rem);
+  height: 2px;
+  background: var(--bs-border-color);
+  z-index: 0;
+  transition: background-color 0.3s ease;
+}
+/* first step */
+.wizard-steps .wizard-step:first-child::after {
+  left: 50%;
+}
+/* last step */
+.wizard-steps .wizard-step:last-child::before {
+  right: 50%;
+}
+
+.wizard-steps .wizard-step.completed:not(:last-child)::after {
+  background: var(--bs-success);
+}
+
+.wizard-steps .wizard-step.active:not(:last-child)::after {
+  background: var(--bs-primary);
+}
+
+.wizard-steps .wizard-step .step-number {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 0.5rem;
+  background: var(--bs-light);
+  border: 2px solid var(--bs-border-color);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  color: var(--bs-primary);
+}
+
+.wizard-steps .wizard-step.active .step-number {
+  background: var(--bs-primary);
+  border-color: var(--bs-primary);
+  color: white;
+}
+
+.wizard-steps .wizard-step.completed .step-number {
+  background: var(--bs-success);
+  border-color: var(--bs-success);
+  color: white;
+}
+
+.wizard-steps .wizard-step .step-title {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.wizard-steps .wizard-step .step-description {
+  font-size: 0.875rem;
+}
+
+.wizard-content {
+  min-height: 400px;
+}
+
+.wizard-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--bs-border-color);
+}
+.max-w-full {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.featured-card {
+    transform: scale(1.05);
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-shadow:hover {
+    transform: translateY(-5px);
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12) !important;
+}
+.featured-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2) !important;
+}
