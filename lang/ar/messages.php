@@ -26,6 +26,7 @@ return [
     'Add Coupon' => 'إضافة كوبون',
     'Add Message' => 'إضافة رسالة',
     'Add Option' => 'إضافة خيار',
+    'Geidea Payment Intent ID' => 'معرف الدفع في Geidea',
     'Add Plan' => 'إضافة خطة',
     'Add Product' => 'إضافة منتج',
     'Add Products' => 'إضافة منتجات',

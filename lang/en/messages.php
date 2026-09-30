@@ -25,6 +25,7 @@ return [
     'Add Category' => 'Add Category',
     'Add Coupon' => 'Add Coupon',
     'Add Message' => 'Add Message',
+    'Geidea Payment Intent ID' => 'Geidea Payment Intent ID',
     'Add Option' => 'Add Option',
     'Add Plan' => 'Add Plan',
     'Add Product' => 'Add Product',

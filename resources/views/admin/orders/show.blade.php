@@ -98,7 +98,7 @@
                                     <span class="text-muted">-</span>
                                 @endif
                             </dd>
-                            
+
                             <dt class="col-sm-3 mt-3">{{ __('Payment Status') }}</dt>
                             <dd class="col-sm-9 mt-3">
                                 @if($order->payment_status === 'paid')
@@ -138,6 +138,13 @@
                                 <dt class="col-sm-3 mt-3">{{ __('Fawry Reference') }}</dt>
                                 <dd class="col-sm-9 mt-3">
                                     <code>{{ $order->fawry_ref_number }}</code>
+                                </dd>
+                            @endif
+
+                            @if($order->geidea_payment_intent_id)
+                                <dt class="col-sm-3 mt-3">{{ __('Geidea Payment Intent ID') }}</dt>
+                                <dd class="col-sm-9 mt-3">
+                                    <code>{{ $order->geidea_payment_intent_id }}</code>
                                 </dd>
                             @endif
 
